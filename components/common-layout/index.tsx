@@ -9,7 +9,7 @@ const CommonLayout = ({ children }: any) => {
         <div className="lg:w-[280px] border-r border-[#55527c1a]">
           <Header />
         </div>
-        <main className="lg:max-w-[calc(100%-280px)] w-full">{children}</main>
+        <main className="lg:max-w-[calc(100%-280px)] xl:mt-0 mt-[60px] w-full">{children}</main>
       </div>
     </Animate>
   );

@@ -8,3 +8,17 @@ export interface HeaderItem {
 export interface HeaderMobileProps {
   headerData: HeaderItem[];
 }
+
+
+export interface experienceCardData {
+  id: number;
+  title: string;
+  company: string;
+  duration: string;
+  endDate?: string;
+  description: string;
+
+}
+export interface experienceCardDataProps {
+  experienceData : experienceCardData[]
+}

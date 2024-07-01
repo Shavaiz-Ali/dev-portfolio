@@ -1,4 +1,5 @@
 import AboutDetails from "@/components/about-details";
+import Experience from "@/components/experience-cards";
 import React from "react";
 
 const About = () => {
@@ -20,10 +21,10 @@ const About = () => {
     },
   ];
   return (
-    <div className="p-4 xl:px-[121px] lg:py-[100px]">
-      <div data-aos="fade-right">
+    <div className="w-full">
+      <div className="p-4 xl:px-[121px] lg:py-[100px]" data-aos="fade-right">
         <AboutDetails />
-        <div className="grid grid-col-1 md:grid-cols-3 sm:grid-cols-2 mt-16 sm:gap-x-8 gap-y-8">
+        <div className="grid grid-col-1 md:grid-cols-3 sm:grid-cols-2 my-16 sm:gap-x-8 gap-y-8">
           {cardData.map((item) => (
             <div
               className={`group py-12 flex justify-center items-center gap-y-2 rounded transition-all ease-in-out duration-300 ${
@@ -48,6 +49,10 @@ const About = () => {
             </div>
           ))}
         </div>
+      </div>
+      {/* experience cards  */}
+      <div className="p-4 xl:px-[121px] lg:py-[100px] bg-[#f3f9ff]">
+        <Experience />
       </div>
     </div>
   );

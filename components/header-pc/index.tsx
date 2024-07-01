@@ -56,7 +56,7 @@ const HeaderPc: React.FC<HeaderMobileProps> = ({ headerData }) => {
           ))}
         </div>
         <p className="text-center text-[14px] w-56 text-[#55527c]">
-          Copyright © 2024 Robert Elisc. All rights reserved.{" "}
+          Copyright © 2024 Shavaiz Ali. All rights reserved.{" "}
         </p>
       </div>
     </Fragment>

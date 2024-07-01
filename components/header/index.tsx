@@ -6,7 +6,7 @@ import HeaderPc from "../header-pc";
 const Header = () => {
   return (
     <header className="lg:fixed lg:left-0 top-0 overflow-hidden">
-      <div className="lg:hidden flex w-full justify-between items-center p-3">
+      <div className="lg:hidden fixed top-0 left-0 h-[60px] shadow-sm z-50 bg-white flex w-full justify-between items-center p-3">
         <h1 className="text-2xl sm:text-3xl lg:text-4xl text-[#A5A6FF] font-bold">
           S.Ali
         </h1>
