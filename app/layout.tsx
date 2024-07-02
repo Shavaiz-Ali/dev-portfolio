@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CommonLayout from "@/components/common-layout";
+import CursorFollowAnimation from "@/components/cursor-follow-animatio";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CommonLayout children={children}/>
+        <CursorFollowAnimation /> 
+        <CommonLayout children={children} />
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <div className="p-4 xl:px-[121px] lg:py-[100px]" data-aos="fade-right">
         <AboutDetails />
         <div className="grid grid-col-1 md:grid-cols-3 sm:grid-cols-2 my-16 sm:gap-x-8 gap-y-8">
@@ -51,7 +51,7 @@ const About = () => {
         </div>
       </div>
       {/* experience cards  */}
-      <div className="p-4 xl:px-[121px] lg:py-[100px] bg-[#f3f9ff]">
+      <div className="p-4 xl:px-[121px] lg:py-[100px] bg-[#f3f9ff]" data-aos="fade-left">
         <Experience />
       </div>
     </div>

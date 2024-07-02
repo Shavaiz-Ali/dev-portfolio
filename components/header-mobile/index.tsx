@@ -16,7 +16,7 @@ const HeaderMobile: React.FC<HeaderMobileProps> = ({ headerData }) => {
   return (
     <Sheet open={openSideBar} onOpenChange={setOpenSideBar}>
       <SheetTrigger asChild>
-        <Button className="xl:hidden bg-transparent text-[#000000]" onClick={() => setOpenSideBar(true)}>
+        <Button className="xl:hidden bg-transparent text-[#000000] hover:bg-transparent" onClick={() => setOpenSideBar(true)}>
           <AlignJustify className="h-6 w-6" />
           <span className="sr-only">Toggle navigation menu</span>
         </Button>

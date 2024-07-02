@@ -1,29 +1,31 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
 
-export function Dialogexperience({ openDialog, setOpenDialog, item }: any) {
+import { X } from "lucide-react";
+
+export function DialogDetails({ openDialog, setOpenDialog, item }: any) {
   return (
     <Dialog open={openDialog} onOpenChange={setOpenDialog}>
-      <DialogContent className="sm:max-w-[725px] min-w-[300px] max-h-[550px] overflow-y-auto p-10">
-        <div className="w-full h-[350px]">
+      <DialogContent className="dialog-content  outline-none w-[90%] sm:max-w-[725px] max-h-[550px] overflow-y-auto sm:p-10 p-7">
+        <div className="relative w-full h-[200px] xl:h-[400px] sm:h-[350px]">
           <Image
             src={"/experience/mainbanner.jpg"}
             alt="banner image"
             // sizes="(max-hight: 500px) 100vw, 33vw"
             loading="lazy"
-            height={500}
-            width={500}
+            // height={500}
+            // width={500}
+            fill
             className="w-full h-full rounded-md"
-            style={{ position: "static" }}
+            // style={{ position: "static" }}
           />
         </div>
         <DialogHeader className="text-start space-y-4 mt-5">
@@ -53,7 +55,6 @@ export function Dialogexperience({ openDialog, setOpenDialog, item }: any) {
             </p>
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4"></div>
       </DialogContent>
     </Dialog>
   );

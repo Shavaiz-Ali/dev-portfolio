@@ -3,7 +3,7 @@
 import { experienceCardData, experienceCardDataProps } from "@/types";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { useState } from "react";
-import { Dialogexperience } from "../experience-dialog";
+import { DialogDetails } from "../experience-dialog";
 import { Dialog, DialogTrigger } from "../ui/dialog";
 import { Button } from "../ui/button";
 
@@ -36,7 +36,7 @@ const ExperinceCard = ({ item }: any) => {
         </CardContent>
       </Card>
       {openDialog ? (
-        <Dialogexperience
+        <DialogDetails
           openDialog={openDialog}
           setOpenDialog={setOpenDialog}
           item={item}
