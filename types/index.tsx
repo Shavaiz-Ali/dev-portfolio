@@ -22,3 +22,16 @@ export interface experienceCardData {
 export interface experienceCardDataProps {
   experienceData : experienceCardData[]
 }
+
+
+
+export interface servicesCard {
+  id: number,
+  title: string,
+  description: string,
+  skills: string[]
+}
+
+export interface servicesCardProps {
+  servicesData : servicesCard[]
+}

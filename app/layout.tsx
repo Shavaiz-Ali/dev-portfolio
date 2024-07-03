@@ -20,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CursorFollowAnimation /> 
+        <div className="lg:flex hidden">
+          <CursorFollowAnimation />
+        </div>
         <CommonLayout children={children} />
       </body>
     </html>

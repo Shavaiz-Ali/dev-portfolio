@@ -12,7 +12,7 @@ const ExperinceCard = ({ item }: any) => {
   return (
     <>
       <Card
-        className="border-0 rounded-[2px] shadow-sm p-6 cursor-pointer lg:hover:-translate-y-2 transition-transform ease-in-out duration-300"
+        className="border-0 rounded-[2px] shadow-sm sm:p-6 p-4 cursor-pointer lg:hover:-translate-y-2 transition-transform ease-in-out duration-300"
         onClick={() => setOpenDialog(true)}
       >
         <CardHeader className="flex flex-row items-start justify-between w-full space-y-0 py-4">
@@ -24,7 +24,7 @@ const ExperinceCard = ({ item }: any) => {
             <h3 className="text-xl text-[#130F49] font-bold">{item.title}</h3>
           </div>
           <div className="self-start">
-            <span className="text-[1rem] text-[#55527c] font-semibold">
+            <span className="truncate text-[1rem] text-[#55527c] font-semibold">
               -{item.company}
             </span>
           </div>
