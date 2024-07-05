@@ -9,10 +9,12 @@ import Image from "next/image";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 const HeaderMobile: React.FC<HeaderMobileProps> = ({ headerData }) => {
   const [openSideBar, setOpenSideBar] = useState(false)
   // eslint-disable-next-line react/jsx-key
   const socialIcons = [<FaFacebookF />, <FaLinkedinIn />, <FaTwitter />];
+  const pathname = usePathname();
   return (
     <Sheet open={openSideBar} onOpenChange={setOpenSideBar}>
       <SheetTrigger asChild>
@@ -39,7 +41,9 @@ const HeaderMobile: React.FC<HeaderMobileProps> = ({ headerData }) => {
             {headerData.map((menuItem) => (
               <Link
                 href={menuItem.path}
-                className="w-full items-center py-2 text-lg font-semibold "
+                className={`w-full items-center py-2 text-lg font-semibold ${
+                  pathname === menuItem.path ? "text-[#a5a6ff]" : "text-[#55527c]"
+                }`}
                 key={menuItem.id}
                 onClick={() =>  setOpenSideBar(false)}
               >

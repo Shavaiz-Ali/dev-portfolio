@@ -107,3 +107,13 @@ html {
   scrollbar-color: #a5a6ff #f1f1f1;
 }
 
+
+.video-player > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.video-player > div > div {
+  width: 100% !important;
+  height: 100% !important;
+}

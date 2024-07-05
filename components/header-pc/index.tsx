@@ -1,17 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, } from "react";
 import Link from "next/link";
 
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { HeaderMobileProps } from "@/types";
+import { usePathname } from "next/navigation";
 const HeaderPc: React.FC<HeaderMobileProps> = ({ headerData }) => {
   // eslint-disable-next-line react/jsx-key
   const socialIcons = [<FaFacebookF />, <FaLinkedinIn />, <FaTwitter />];
-  const [activeTab, setActiverTab] = useState(1);
+  const pathname = usePathname();
   return (
     <Fragment>
       <div className="flex flex-col justify-center items-center gap-y-1">
@@ -34,11 +35,10 @@ const HeaderPc: React.FC<HeaderMobileProps> = ({ headerData }) => {
         {headerData.map((item) => (
           <Link
             className={`text-[14px] leading-[30px] text-[400] ${
-              activeTab === item.id ? "text-[#a5a6ff]" : "text-[#55527c]"
+              pathname === item.path ? "text-[#a5a6ff]" : "text-[#55527c]"
             }`}
             href={item.path}
             key={item.id}
-            onClick={() => setActiverTab(item.id)}
           >
             {item.title}
           </Link>

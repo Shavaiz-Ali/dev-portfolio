@@ -41,7 +41,7 @@ export function DialogDetails({ openDialog, setOpenDialog, item }: any) {
             <div className="flex items-center gap-4 flex-wrap">
               {item.skills.map((skill, index) => (
                 <div
-                  className="flex justify-center items-center  h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e]"
+                  className="flex justify-center items-center h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e]"
                   key={index}
                 >
                   <span> {skill}</span>

@@ -23,10 +23,8 @@ const CursorFollowAnimation = () => {
         e.clientX,
         e.clientY
       );
-      console.log("style", elementUnderCursor);
       if (elementUnderCursor) {
         const cursorStyle = window.getComputedStyle(elementUnderCursor).cursor;
-        console.log("style", cursorStyle);
         if (cursorStyle === "pointer") {
           setCursorLink(true);
         } else {
