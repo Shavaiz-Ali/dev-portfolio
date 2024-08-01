@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div
-      className="flex lg:flex-row flex-col justify-center items-center md:gap-x-[50px] gap-y-8 w-full xl:px-[121px] p-4 xl:py-[100px] bg-[#effbf8] min-h-screen"
+      className="flex lg:flex-row flex-col justify-center items-center md:gap-x-[50px] gap-y-8 w-full xl:px-[121px] p-4 xl:py-[100px] bg-[#effbf8] min-h-screen lg:overflow-hidden"
       data-aos="fade-right"
     >
       <Hero />

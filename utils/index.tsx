@@ -137,3 +137,100 @@ export const servicesData = [
     ],
   },
 ];
+
+
+
+export const projectsData = [
+  {
+    id:12,
+    banner:"/projects/2.jpg",
+    url:"#",
+    title: "Shoes Store",
+    stake:"Landing Page"
+  },
+  {
+    id:13,
+    banner:"/projects/store.jpg",
+    url:"#",
+    title: "E-commerce Store",
+    stake:"Full Stack"
+  },
+  {
+    id:14,
+    banner:"/projects/youtube-clone.avif",
+    url:"#",
+    title: "Youtube Clone",
+    stake:"SPA(React JS)"
+  },
+]
+
+
+
+export const blogData =[
+  {
+    "id":1001,
+    "title": "How to Integrate Clerk Authentication in Your Next.js App: A Complete Guide (2024 Update)",
+    "banner":"",
+    "date": "May 29, 2024",
+    "readTime": "4 min read",
+    "views": 23,
+    "reads": 10,
+    "link": "View story",
+    "description": "Authentication is a fundamental part of any web application, providing security and personalized user experiences. Clerk is a powerful authentication solution that simplifies integrating authentication and user management into your applications. This post will walk you through the steps of integrating Clerk with a Next.js app."
+  },
+  {
+    "id":1002,
+    "title": "Next.js API Routes vs. Server Actions: Which One to Use and Why?",
+    "banner":"",
+    "date": "May 29, 2024",
+    "readTime": "4 min read",
+    "views": 331,
+    "reads": 235,
+    "link": "View story",
+    "description": "In the evolving landscape of web development, Next.js has established itself as a robust framework for building React applications with server-side rendering, static site generation, and dynamic routing. Two important features in Next.js for handling server-side logic are API Routes and Server Actions. Both have their use cases, advantages, and trade-offs. This blog post will delve into the specifics of each, providing guidance on when to use them and showcasing code examples to illustrate their usage."
+  },
+  {
+    "id":1003,
+    "title": "Mastering the Basics: 10 Essential JavaScript Topics to Learn Before Moving to React.",
+    "banner":"",
+    "date": "May 13, 2024",
+    "readTime": "6 min read",
+    "views": 13,
+    "reads": 4,
+    "link": "View story",
+    "description": `JavaScript is a versatile and dynamic programming language that has become a cornerstone of modern web development. With the rise of popular frameworks like React, Angular, and Vue.js, it’s easy to get caught up in the hype and dive headfirst into learning a specific framework. However, it’s crucial to establish a solid understanding of JavaScript fundamentals before making the leap. In this blog post, we’ll explore the essential topics to master before moving on to React or other JavaScript frameworks.`
+  },
+  {
+    "id":1004,
+    "title": "2024’s Front-End Elegance: Top CSS Libraries & UI Frameworks Unveiled for Developers",
+    "banner":"",
+    "date": "May 8, 2024",
+    "readTime": "3 min read",
+    "views": 24,
+    "reads": 11,
+    "link": "View story",
+    "description": "In the ever-evolving world of web development, CSS libraries and frameworks are essential tools that help developers create stylish, responsive, and efficient websites. As we step into 2024, let’s explore some of the most popular CSS libraries and frameworks, including UI component-based libraries like Shadcn, and provide you with code snippets for installation and links to their official websites."
+  },
+  {
+    "id":1005,
+    "title": "The Future of Web Development and Software Engineering in the AI Era: A Survival Guide for Developers ",
+    "banner":"",
+    "date": "May 7, 2024",
+    "readTime": "3 min read",
+    "views": 3,
+    "reads": 2,
+    "link": "View story",
+    "description": "The rise of Artificial Intelligence (AI) has transformed the landscape of web development and software engineering, bringing about both opportunities and challenges for developers. As AI continues to advance, it’s crucial for developers to understand the future of their field and adapt to stay relevant. In this blog, we’ll explore the future of web development and software engineering in the AI era and provide a survival guide for developers."
+  },
+  {
+    "id":1006,
+    "title": "React 19: Unlocking New Possibilities — A Comprehensive Guide to New Features and Hooks",
+    "banner":"",
+    "date": "May 6, 2024",
+    "readTime": "2 min read",
+    "views": 7,
+    "reads": 2,
+    "link": "View story",
+    "description": "React 19, the latest iteration of the popular JavaScript library, has arrived, bringing with it a plethora of exciting new features, improvements, and hooks. In this blog, we’ll delve into the world of React 19, exploring the latest additions and enhancements that will take your development experience to the next level."
+  }
+]
