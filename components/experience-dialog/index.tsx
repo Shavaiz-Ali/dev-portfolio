@@ -8,10 +8,14 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-
+import { MdOutlineDateRange } from "react-icons/md";
+import { FaReadme } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import { X } from "lucide-react";
 
 export function DialogDetails({ openDialog, setOpenDialog, item }: any) {
+  console.log(item)
   return (
     <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogContent className="dialog-content  outline-none w-[90%] sm:max-w-[725px] max-h-[550px] overflow-y-auto sm:p-10 p-7">
@@ -39,14 +43,27 @@ export function DialogDetails({ openDialog, setOpenDialog, item }: any) {
             </div>
           ) : (
             <div className="flex items-center gap-4 flex-wrap">
-              {item.skills.map((skill, index) => (
-                <div
-                  className="flex justify-center items-center h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e]"
-                  key={index}
-                >
-                  <span> {skill}</span>
+              {item.skills ? (
+                item.skills.map((skill, index) => (
+                  <div
+                    className="flex justify-center items-center h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e]"
+                    key={index}
+                  >
+                    <span> {skill}</span>
+                  </div>
+                ))
+              ) : (
+                <div className="flex justify-center items-center  text-[#ffaf5e] sm:gap-x-3 gap-2">
+                  <div className="flex justify-center items-center h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e] sm:gap-x-3 gap-x-1">
+                    <MdOutlineDateRange />
+                    <span className="text-[14px] font-[400] text-nowrap">{item.date}</span>
+                  </div>
+                  <div className="flex justify-center items-center h-8 w-auto px-4 bg-black rounded-sm text-[#ffaf5e] sm:gap-x-3 gap-x-1">
+                    <FaReadme />
+                    <span className="text-[14px] font-[400] text-nowrap">{item.readTime}</span>
+                  </div>
                 </div>
-              ))}
+              )}
             </div>
           )}
           <div className="space-y-1">
@@ -57,12 +74,38 @@ export function DialogDetails({ openDialog, setOpenDialog, item }: any) {
           </div>
           <DialogDescription>
             <p className="text-[14px] text-[#9998b1] font-serif leading-7">
-              {
-                item.description
-              }
+              {item.description}
             </p>
           </DialogDescription>
         </DialogHeader>
+        {item.link ? (
+          <DialogFooter>
+            <div className="flex flex-wrap justify-between items-center w-full sm:gap-0 gap-y-3">
+              <div className="flex justify-center items-center gap-x-6">
+                <div className="flex justify-center items-center gap-x-2 text-nowrap">
+                  <FaUser />
+                  <span className="text-sm sm:font-medium text-[#130F49] text-nowrap">
+                    {item.views} views
+                  </span>
+                </div>
+                <div className="flex justify-center items-center gap-x-2 text-nowrap">
+                  <FaReadme />
+                  <span className="text-sm sm:font-medium text-[#130F49]">
+                    {item.reads} reads
+                  </span>
+                </div>
+              </div>
+              <a
+                href={item.link}
+                target="_blank"
+                className="text-[#130F49] sm:font-semibold font-medium hover:underline flex justify-center items-center gap-x-1"
+              >
+                <span className="sm:text-md text-[14px] text-nowrap">Check Out Blog</span>
+                <RiArrowRightUpLine className=""/>
+              </a>
+            </div>
+          </DialogFooter>
+        ) : null}
       </DialogContent>
     </Dialog>
   );
