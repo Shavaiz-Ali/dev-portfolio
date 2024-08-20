@@ -1,6 +1,6 @@
 "use client";
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const CursorFollowAnimation = () => {
   const [cursorLink, setCursorLink] = useState(false);
@@ -8,7 +8,7 @@ const CursorFollowAnimation = () => {
     gsap.set(".ball", { xPercent: -50, yPercent: -50 });
     let targets = gsap.utils.toArray(".ball");
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: any) => {
       gsap.to(targets, {
         duration: 0.5,
         x: e.clientX,
@@ -45,11 +45,17 @@ const CursorFollowAnimation = () => {
       <div className="">
         <div
           className={`ball ${
-            cursorLink ? "h-16 w-16 bg-[#a5a6ff] opacity-30 transition-all duration-150 ease-linear" : "border-2 border-[#a5a6ff] w-8 h-8"
+            cursorLink
+              ? "h-16 w-16 bg-[#a5a6ff] opacity-30 transition-all duration-150 ease-linear"
+              : "border-2 border-[#a5a6ff] w-8 h-8"
           } fixed top-0 left-0 z-[9999999] flex justify-center items-center rounded-full`}
           style={{ pointerEvents: "none" }}
         >
-          <div className={` ${cursorLink && "hidden"} h-2 w-2 rounded-full bg-[#a5a6ff]`}></div>
+          <div
+            className={` ${
+              cursorLink && "hidden"
+            } h-2 w-2 rounded-full bg-[#a5a6ff]`}
+          ></div>
         </div>
       </div>
     </>
