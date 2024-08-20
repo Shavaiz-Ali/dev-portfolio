@@ -7,9 +7,9 @@ import { MdOutlineDateRange } from "react-icons/md";
 import { DialogDetails } from "../experience-dialog";
 const BlogPostCard = () => {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
-  const [singleBlogData, setSingleBLogData] = useState(null);
+  const [singleBlogData, setSingleBLogData] = useState<null | object>(null);
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     // console.log(id);
     const data = blogData[id];
     setSingleBLogData(data);
