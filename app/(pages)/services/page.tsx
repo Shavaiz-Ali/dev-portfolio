@@ -4,8 +4,8 @@ import { servicesCard } from "@/types";
 import { servicesData } from "@/utils";
 import { Play } from "lucide-react";
 import React, { Fragment } from "react";
-
-const Services: React.FC = () => {
+ 
+const Services= () => {
   return (
     <div
       className="w-full p-4 xl:px-[121px] lg:py-[100px]"
@@ -25,7 +25,7 @@ const Services: React.FC = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-5 mt-8">
-        {servicesData.map((service: servicesCard) => (
+        {servicesData.map((service) => (
           <Fragment key={service.id}>
             <ServicesCard service={service} />
           </Fragment>

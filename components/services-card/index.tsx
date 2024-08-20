@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription } from "../ui/card";
 import { MoveRight } from "lucide-react";
 import { DialogDetails } from "../experience-dialog";
 
-const ServicesCard: React.FC<servicesCardProps> = ({ service }:any) => {
+const ServicesCard= ({ service }:any) => {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
   return (
     <>
